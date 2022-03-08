@@ -177,7 +177,7 @@ public class Person {
 			 	double y = entry.getValue().getLocation().getLatitude();// y co-ordinate for ease of use later
 			 	if(y1 <= y && y<=y2 && x1 <= x && x <= x2){//if these conditions are met, code goes to the next line, this statement checks if the location of the user in the map is inside the radius.
 			 		if(entry.getValue().equals(this)){
-						continue;//to prevent including the current person, we use continue;, in case it finds the exact same person in the list.
+						continue;//to prevent including the current person, we use continue;, in case it finds the exact same person in the list twice.
 					}
 			 		else{
 						neighbours.put(entry.getKey(),entry.getValue());//if the person in the map is in the operational radius, the information is put into the hashmap 'neighbours'
